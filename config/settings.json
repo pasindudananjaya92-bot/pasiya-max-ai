@@ -1,0 +1,14 @@
+ {
+  "project": "Pasiya Max AI OS",
+  "version": "1.0.0",
+  "theme": "dark",
+  "language": "en",
+  "modules": {
+    "ai": true,
+    "blogger": true,
+    "social": true,
+    "analytics": true,
+    "dashboard": true
+  },
+  "status": "development"
+}
