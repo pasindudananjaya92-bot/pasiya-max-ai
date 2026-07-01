@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pasiya Max AI - Dashboard</title>
+
+<style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  background:#0d1117;
+  font-family:Arial,sans-serif;
+  color:white;
+}
+
+header{
+  background:#161b22;
+  padding:20px;
+  text-align:center;
+  box-shadow:0 0 10px #000;
+}
+
+header h1{
+  font-size:32px;
+  margin-bottom:10px;
+}
+
+header p{
+  color:#aaa;
+  font-size:14px;
+}
+
+nav{
+  background:#1f2937;
+  padding:15px;
+  text-align:center;
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  margin:5px;
+  padding:10px 15px;
+  background:#00c896;
+  border-radius:10px;
+  display:inline-block;
+  transition:0.3s;
+}
+
+nav a:hover{
+  background:#00a97f;
+  transform:translateY(-2px);
+}
+
+.hero{
+  padding:40px 20px;
+  text-align:center;
+}
+
+.hero h2{
+  font-size:40px;
+  margin-bottom:20px;
+  color:#00c896;
+}
+
+.hero p{
+  max-width:800px;
+  margin:auto;
+  line-height:1.8;
+  color:#cccccc;
+  font-size:16px;
+}
+
+.container{
+  max-width:1200px;
+  margin:auto;
+  padding:20px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+  margin-top:30px;
+}
+
+.card{
+  background:#161b22;
+  padding:25px;
+  border-radius:15px;
+  transition:0.3s;
+  box-shadow:0 0 10px rgba(0,0,0,.3);
+}
+
+.card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 0 20px rgba(0,200,150,.2);
+}
+
+.card h3{
+  margin-bottom:15px;
+  color:#00c896;
+  font-size:20px;
+}
+
+.card p{
+  color:#bdbdbd;
+  line-height:1.6;
+  margin-bottom:15px;
+}
+
+.button{
+  display:inline-block;
+  background:#00c896;
+  color:white;
+  padding:10px 20px;
+  border-radius:10px;
+  text-decoration:none;
+  transition:0.3s;
+  font-weight:bold;
+}
+
+.button:hover{
+  background:#00a97f;
+}
+
+.status{
+  background:#0f5132;
+  padding:15px;
+  border-radius:10px;
+  text-align:center;
+  margin-top:20px;
+  font-weight:bold;
+  color:#00ff99;
+}
+
+.links{
+  margin-top:40px;
+}
+
+.links h2{
+  text-align:center;
+  margin-bottom:20px;
+  color:#00c896;
+}
+
+.link-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:15px;
+}
+
+.link-box{
+  background:#161b22;
+  padding:15px;
+  border-radius:12px;
+  text-align:center;
+  transition:0.3s;
+}
+
+.link-box:hover{
+  background:#1f2937;
+}
+
+.link-box a{
+  color:#58a6ff;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+.link-box a:hover{
+  color:#00c896;
+}
+
+footer{
+  margin-top:50px;
+  padding:30px;
+  text-align:center;
+  background:#161b22;
+  color:#888;
+  border-top:1px solid #333;
+}
+
+.logout-btn{
+  position:absolute;
+  top:20px;
+  right:20px;
+  background:#ff4d4d;
+  padding:8px 15px;
+  border-radius:8px;
+  text-decoration:none;
+  color:white;
+  font-size:14px;
+  transition:0.3s;
+}
+
+.logout-btn:hover{
+  background:#ff3333;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<a href="#" id="logoutBtn" class="logout-btn">🚪 Logout</a>
+
+<header>
+
+<h1>🤖 PASIYA MAX AI OS - DASHBOARD</h1>
+
+<p>AI Control Center For Social Media, Blog & Website Automation</p>
+
+</header>
+
+<nav>
+
+<a href="index.html">🏠 Home</a>
+<a href="dashboard.html">📊 Dashboard</a>
+<a href="ai-assistant.html">🤖 AI Assistant</a>
+<a href="blog-writer.html">📝 Blog Writer</a>
+<a href="social-links.html">📱 Social Media</a>
+<a href="analytics.html">📈 Analytics</a>
+<a href="settings.html">⚙️ Settings</a>
+
+</nav>
+
+<section class="hero">
+
+<h2>Welcome To Pasiya Max AI OS Dashboard</h2>
+
+<p>
+
+ඔබගේ වෙබ්සයිට්, බ්ලොග්, සामාජිक මාධ්‍ය ගිතුබු පිළිබඳ, 
+AI මෙවලම් සහ ස්වයංක්‍රියතා පද්ධතිය එක තැනෙන් කළමනාකරණය කරන්න.
+
+</p>
+
+<div class="status">
+
+🟢 SYSTEM STATUS : ONLINE
+
+</div>
+
+</section>
+
+<div class="container">
+
+<div class="grid">
+
+<div class="card">
+
+<h3>🤖 AI Assistant</h3>
+
+<p>
+
+ඔබගේ AI පාලක කේන්ද්‍ර උදඩ, බුද්ධිමත්, හැඩැත්වීම සහ AI ක්ෂමතා කර්තව්‍ය.
+
+</p>
+
+<a class="button" href="ai-assistant.html">
+
+Open
+
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>📝 Blog Manager</h3>
+
+<p>
+
+බ්ලොග් ලිපි සෑදුව, SEO අන්තර්ගත සහ ප්‍රකාශනය සිතියුම.
+
+</p>
+
+<a class="button" href="blog-writer.html">
+
+Open
+
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>📱 Social Media</h3>
+
+<p>
+
+Facebook, Instagram, Pinterest, LinkedIn, Telegram සහ තවත්.
+
+</p>
+
+<a class="button" href="social-links.html">
+
+Open
+
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>📊 Analytics</h3>
+
+<p>
+
+වෙබ්සයිට් ගමන, බ්ලොග් කාර්යසාධනය සහ සමාජ මාධ්‍ය වර්ධනය ට්‍රැක් කරන්න.
+
+</p>
+
+<a class="button" href="analytics.html">
+
+Open
+
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>📅 Scheduler</h3>
+
+<p>
+
+බ්ලොග් පසුවිතරණ, සමාජ මාධ්‍ය පසුවිතරණ සහ AI කර්තව්‍යය නිර්ධාරණ කරන්න.
+
+</p>
+
+<a class="button" href="scheduler.html">
+
+Open
+
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>⚙️ Settings</h3>
+
+<p>
+
+ඔබගේ පැතිකඩ, GitHub, වෙබ්සයිට් සහ AI සිතියුම කළමනාකරණය කරන්න.
+
+</p>
+
+<a class="button" href="settings.html">
+
+Open
+
+</a>
+
+</div>
+
+</div>
+
+<div class="links">
+
+<h2>🌐 My Network</h2>
+
+<div class="link-grid">
+
+<div class="link-box">
+<a href="https://mamageblog.blogspot.com" target="_blank">
+🌍 My Blogger Website
+</a>
+</div>
+
+<div class="link-box">
+<a href="https://github.com/pasindudananjaya92-bot/pasiya-max-ai" target="_blank">
+💻 GitHub Repository
+</a>
+</div>
+
+<div class="link-box">
+<a href="https://pasiyamax.vercel.app" target="_blank">
+🚀 Vercel App
+</a>
+</div>
+
+<div class="link-box">
+<a href="social-links.html">
+📱 All Social Media Links
+</a>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<footer>
+
+<h3>Pasiya Max AI OS v1.0</h3>
+
+<p>
+
+Designed by Pasindu Dananjaya
+
+</p>
+
+<p>
+
+AI Dashboard | Blog | Social Media | Automation
+
+</p>
+
+</footer>
+
+<script type="module">
+import { auth } from "./firebase-config.js";
+import { signOut } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+
+const logoutBtn = document.getElementById("logoutBtn");
+
+if (logoutBtn) {
+  logoutBtn.addEventListener("click", async (e) => {
+    e.preventDefault();
+    try {
+      await signOut(auth);
+      window.location.href = "login.html";
+    } catch (error) {
+      alert(`❌ Error: ${error.message}`);
+    }
+  });
+}
+</script>
+
+</body>
+
+</html>
