@@ -1,0 +1,14 @@
+node_modules/
+.env.local
+.env*.local
+.DS_Store
+dist/
+build/
+*.log
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.cache/
+.firebase/
