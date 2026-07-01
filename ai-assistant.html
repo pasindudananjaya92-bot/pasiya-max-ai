@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -8,59 +8,139 @@
 <style>
 
 body{
-background:#0d1117;
-font-family:Arial,sans-serif;
-color:white;
-margin:0;
-padding:20px;
+  background:#0d1117;
+  font-family:Arial,sans-serif;
+  color:white;
+  margin:0;
+  padding:20px;
 }
 
 .container{
-max-width:900px;
-margin:auto;
+  max-width:900px;
+  margin:auto;
 }
 
 .card{
-background:#161b22;
-padding:20px;
-border-radius:15px;
-margin-bottom:20px;
+  background:#161b22;
+  padding:20px;
+  border-radius:15px;
+  margin-bottom:20px;
+  box-shadow:0 0 10px rgba(0,0,0,.3);
 }
 
 textarea{
-width:100%;
-height:180px;
-padding:15px;
-border:none;
-border-radius:10px;
-font-size:16px;
+  width:100%;
+  height:180px;
+  padding:15px;
+  border:none;
+  border-radius:10px;
+  font-size:16px;
+  background:#0d1117;
+  color:#fff;
+  resize:vertical;
+}
+
+textarea:focus{
+  outline:none;
+  border:2px solid #00c896;
+  box-shadow:0 0 10px rgba(0, 200, 150, 0.3);
 }
 
 button{
-margin-top:15px;
-padding:12px 25px;
-background:#00c896;
-color:white;
-border:none;
-border-radius:10px;
-font-size:16px;
-cursor:pointer;
+  margin-top:15px;
+  padding:12px 25px;
+  background:#00c896;
+  color:white;
+  border:none;
+  border-radius:10px;
+  font-size:16px;
+  cursor:pointer;
+  transition:0.3s;
+  font-weight:bold;
+  width:100%;
+}
+
+button:hover{
+  background:#00a97f;
+}
+
+button:disabled{
+  background:#666;
+  cursor:not-allowed;
 }
 
 .status{
-background:#0f5132;
-padding:12px;
-border-radius:10px;
-margin-top:15px;
-font-weight:bold;
+  background:#0f5132;
+  padding:12px;
+  border-radius:10px;
+  margin-top:15px;
+  font-weight:bold;
 }
 
 .commands{
-margin-top:20px;
+  margin-top:20px;
 }
 
 .commands ul{
-line-height:2;
+  line-height:2;
+  list-style:none;
+  padding:0;
+}
+
+.commands li{
+  padding:10px;
+  background:#0d1117;
+  margin-bottom:8px;
+  border-radius:8px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.commands li:hover{
+  background:#1f2937;
+  border-left:3px solid #00c896;
+  padding-left:20px;
+}
+
+.response-box{
+  background:#0d1117;
+  border:1px solid #333;
+  border-radius:10px;
+  padding:20px;
+  margin-top:20px;
+  min-height:100px;
+  max-height:400px;
+  overflow-y:auto;
+  display:none;
+}
+
+.response-box.active{
+  display:block;
+}
+
+.loading{
+  text-align:center;
+  color:#00c896;
+  display:none;
+  margin-top:15px;
+}
+
+.error-msg{
+  color:#ff4d4d;
+  padding:10px;
+  background:rgba(255, 77, 77, 0.1);
+  border-radius:5px;
+  margin-top:10px;
+  display:none;
+}
+
+.success-msg{
+  color:#00ff99;
+  padding:10px;
+  background:rgba(0, 255, 153, 0.1);
+  border-radius:5px;
+  margin-top:10px;
+  display:none;
 }
 
 </style>
@@ -71,61 +151,142 @@ line-height:2;
 
 <div class="container">
 
-<div class="card">
+  <div class="card">
+    <h1>🤖 PASIYA MAX AI ASSISTANT</h1>
+    <p>ඔබගේ AI පාලන කේන්ද්‍රයට සලුවා.</p>
+    <div class="status">
+      🟢 AI STATUS : ONLINE
+    </div>
+  </div>
 
-<h1>🤖 PASIYA MAX AI ASSISTANT</h1>
+  <div class="card">
+    <h2>AI Prompt</h2>
+    <textarea id="aiPrompt" placeholder="ඔබගේ ඉල්ලීම ඉතා ඉතා ලිපින්න..."></textarea>
+    <button onclick="sendPromptToAI()" id="sendBtn">📤 Send to AI</button>
+    <div class="loading" id="loading">⏳ AI පිළිතුරු ලබමින්...</div>
+    <div class="error-msg" id="errorMsg"></div>
+    <div class="success-msg" id="successMsg"></div>
+  </div>
 
-<p>Welcome to your AI Control Center.</p>
+  <div class="card">
+    <h2>⚡ Quick Commands</h2>
+    <div class="commands">
+      <ul>
+        <li onclick="insertCommand('📝 Write Blog Article: [topic]')">📝 Write Blog Article</li>
+        <li onclick="insertCommand('📸 Create Social Media Post: [topic]')">📸 Create Social Media Post</li>
+        <li onclick="insertCommand('🎨 Generate Image Description: [description]')">🎨 Generate Image</li>
+        <li onclick="insertCommand('🎥 Create Video Script: [topic]')">🎥 Create Video Script</li>
+        <li onclick="insertCommand('📅 Schedule Posts: [content]')">📅 Schedule Posts</li>
+        <li onclick="insertCommand('📊 View Analytics: [data type]')">📊 View Analytics</li>
+        <li onclick="insertCommand('🌐 Manage Website: [action]')">🌐 Manage Website</li>
+        <li onclick="insertCommand('⚙️ Open Settings')">⚙️ Open Settings</li>
+      </ul>
+    </div>
+  </div>
 
-<div class="status">
-
-🟢 AI STATUS : ONLINE
-
-</div>
-
-</div>
-
-<div class="card">
-
-<h2>AI Prompt</h2>
-
-<textarea placeholder="Type your request here..."></textarea>
-
-<button>Send to AI</button>
-
-</div>
-
-<div class="card">
-
-<h2>Quick Commands</h2>
-
-<div class="commands">
-
-<ul>
-
-<li>📝 Write Blog Article</li>
-
-<li>📸 Create Social Media Post</li>
-
-<li>🎨 Generate Image</li>
-
-<li>🎥 Create Video</li>
-
-<li>📅 Schedule Posts</li>
-
-<li>📊 View Analytics</li>
-
-<li>🌐 Manage Website</li>
-
-<li>⚙️ Open Settings</li>
-
-</ul>
+  <div class="card response-box" id="responseBox">
+    <h3>🤖 AI Response:</h3>
+    <div id="aiResponse"></div>
+    <button onclick="copyResponse()" style="margin-top:15px;">📋 Copy කරන්න</button>
+  </div>
 
 </div>
 
-</div>
+<script>
+  const promptInput = document.getElementById("aiPrompt");
+  const sendBtn = document.getElementById("sendBtn");
+  const loading = document.getElementById("loading");
+  const errorMsg = document.getElementById("errorMsg");
+  const successMsg = document.getElementById("successMsg");
+  const responseBox = document.getElementById("responseBox");
+  const aiResponse = document.getElementById("aiResponse");
 
-</div>
+  // ✅ Command එකතු කිරීම
+  function insertCommand(command) {
+    promptInput.value = command;
+    promptInput.focus();
+  }
+
+  // ✅ AI හි ඉල්ලීම
+  async function sendPromptToAI() {
+    const prompt = promptInput.value.trim();
+
+    if (!prompt) {
+      showError("Prompt එකතු කරන්න!");
+      return;
+    }
+
+    try {
+      sendBtn.disabled = true;
+      sendBtn.textContent = "⏳ කරමින්...";
+      loading.style.display = "block";
+      errorMsg.style.display = "none";
+      successMsg.style.display = "none";
+
+      // Mock AI Response (Replace with real API)
+      const response = await mockAIResponse(prompt);
+
+      aiResponse.innerHTML = response;
+      responseBox.classList.add("active");
+      successMsg.textContent = "✅ AI පිළිතුරු ගත කර ගෑ!";
+      successMsg.style.display = "block";
+
+      setTimeout(() => {
+        successMsg.style.display = "none";
+      }, 3000);
+
+    } catch (error) {
+      showError(`Error: ${error.message}`);
+    } finally {
+      sendBtn.disabled = false;
+      sendBtn.textContent = "📤 Send to AI";
+      loading.style.display = "none";
+    }
+  }
+
+  // Mock AI Function
+  async function mockAIResponse(prompt) {
+    return `
+      <p><strong>ඔබගේ ඉල්ලීම:</strong> "${prompt}"</p>
+      <hr>
+      <p>
+        🤖 <strong>AI පිළිතුරු:</strong><br>
+        මෙය ඔබගේ ඉල්ලීමට AI පිළිතුරු සිටුවනු ඇත. 
+        සැබෑ API සිටුවීම සඳහා, OpenAI, Gemini, හෝ වෙනත් AI සේවාව සම්බන්ධ කරන්න.
+      </p>
+      <p style="color:#aaa; margin-top:20px; font-size:12px;">
+        ⏱️ Generated: ${new Date().toLocaleString('si-LK')}
+      </p>
+    `;
+  }
+
+  // ✅ Copy functionality
+  function copyResponse() {
+    const text = aiResponse.innerText;
+    navigator.clipboard.writeText(text).then(() => {
+      alert("✅ පිළිතුරු copy කර ගෑ!");
+    }).catch(err => {
+      console.error("Copy failed:", err);
+      showError("Copy අසාර්ථක!");
+    });
+  }
+
+  // ✅ Error display
+  function showError(message) {
+    errorMsg.textContent = `❌ ${message}`;
+    errorMsg.style.display = "block";
+    setTimeout(() => {
+      errorMsg.style.display = "none";
+    }, 5000);
+  }
+
+  // Enter key support
+  promptInput.addEventListener("keypress", (e) => {
+    if (e.key === "Enter" && e.ctrlKey) {
+      sendPromptToAI();
+    }
+  });
+</script>
 
 </body>
 </html>
