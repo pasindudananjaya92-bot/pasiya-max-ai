@@ -10,15 +10,26 @@ const logoutBtn = document.getElementById("logoutBtn");
 
 if (loginBtn) {
   loginBtn.addEventListener("click", async () => {
-    const email = document.getElementById("email").value;
+    const email = document.getElementById("email").value.trim();
     const password = document.getElementById("password").value;
 
     try {
-      await signInWithEmailAndPassword(auth, email, password);
-      alert("Login Successful");
+      const userCredential = await signInWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
+
+      alert("Login Successful: " + userCredential.user.email);
       window.location.href = "index.html";
+
     } catch (error) {
-      alert(error.message);
+      console.log(error);
+
+      alert(
+        "Error Code: " + error.code + "\n\n" +
+        "Error Message: " + error.message
+      );
     }
   });
 }
