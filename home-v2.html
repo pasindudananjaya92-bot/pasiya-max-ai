@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -21,263 +21,93 @@ font-family:'Poppins',sans-serif;
 }
 
 body{
-
 background:#070b14;
 color:white;
-
 }
 
 header{
-
 position:fixed;
 top:0;
 left:0;
 width:100%;
-
 background:rgba(10,15,30,.85);
-
 backdrop-filter:blur(12px);
-
 display:flex;
 justify-content:space-between;
 align-items:center;
-
 padding:18px 40px;
-
 z-index:999;
-
 border-bottom:1px solid rgba(0,255,255,.2);
-
 }
 
 .logo{
-
 font-size:28px;
 font-weight:700;
-
 color:#00e5ff;
-
 text-shadow:0 0 15px #00e5ff;
-
 }
 
 nav{
-
 display:flex;
 gap:15px;
-
 }
 
 nav a{
-
 color:white;
-
 text-decoration:none;
-
 padding:10px 18px;
-
 border-radius:12px;
-
 transition:.3s;
-
 }
 
 nav a:hover{
-
 background:#00bcd4;
-
 color:#000;
-
 }
 
 .hero{
-
 height:100vh;
-
 display:flex;
-
 justify-content:center;
-
 align-items:center;
-
 flex-direction:column;
-
 text-align:center;
-
 padding:30px;
-
-background:
-radial-gradient(circle at top,#10254f,#070b14);
-
+background:radial-gradient(circle at top,#10254f,#070b14);
 }
 
 .hero h1{
-
 font-size:60px;
-
 margin-bottom:20px;
-
 color:#00e5ff;
-
 text-shadow:0 0 20px #00e5ff;
-
 }
 
 .hero p{
-
 max-width:800px;
-
 font-size:20px;
-
 line-height:1.8;
-
 color:#cccccc;
-
 }
 
 .hero button{
-
 margin-top:35px;
-
 padding:15px 35px;
-
 font-size:18px;
-
 border:none;
-
 border-radius:14px;
-
 background:#00e5ff;
-
 cursor:pointer;
-
 font-weight:bold;
-
 transition:.3s;
-
 }
 
 .hero button:hover{
-
 transform:scale(1.05);
-
 box-shadow:0 0 25px #00e5ff;
-
 }
 
-</style>
-</head>
-
-<body>
-
-<header>
-
-<div class="logo">
-Pasiya Max Media
-</div>
-
-<nav>
-
-<a href="#">Home</a>
-
-<a href="#">About</a>
-
-<a href="#">AI</a>
-
-<a href="#">Projects</a>
-
-<a href="#">Contact</a>
-
-</nav>
-
-</header>
-
-<section class="hero">
-
-<h1>Future AI Platform</h1>
-
-<p>
-
-Welcome to the official Pasiya Max Media AI Platform.
-This website is designed to manage AI tools, websites,
-social media, automation and digital projects from one dashboard.
-
-</p>
-
-<button>
-
-Launch Dashboard
-
-</button>
-
-</section>
-<!-- AI Dashboard Section -->
-
-<section class="dashboard">
-
-<h2>🤖 AI Control Center</h2>
-
-<p class="sub">
-Manage your AI tools, websites and social media from one place.
-</p>
-
-<div class="dashboard-grid">
-
-<div class="dashboard-card">
-<h3>🤖 AI Assistant</h3>
-<p>Open your personal AI assistant dashboard.</p>
-<a href="#">Launch</a>
-</div>
-
-<div class="dashboard-card">
-<h3>🌐 Websites</h3>
-<p>Manage Blogger, GitHub Pages and Vercel.</p>
-<a href="#">Open</a>
-</div>
-
-<div class="dashboard-card">
-<h3>📱 Social Media</h3>
-<p>Access all your social platforms.</p>
-<a href="#">Open</a>
-</div>
-
-<div class="dashboard-card">
-<h3>📊 Analytics</h3>
-<p>Track website and social performance.</p>
-<a href="#">View</a>
-</div>
-
-</div>
-
-</section>
-
-<!-- Language -->
-
-<section class="language">
-
-<h2>🌍 Language</h2>
-
-<div class="language-buttons">
-
-<button>Sinhala</button>
-
-<button>English</button>
-
-</div>
-
-</section>
-
-<!-- Live Status -->
-
-<section class="status">
-
-<h2>System Status</h2>
-
-<div class="status-box">
-
-🟢 AI SYSTEM ONLINE
-
-</div>
+/* ===== Dashboard Styles ===== */
 .dashboard{
 padding:90px 30px;
 text-align:center;
@@ -335,6 +165,7 @@ text-decoration:none;
 font-weight:bold;
 }
 
+/* ===== Language Styles ===== */
 .language{
 padding:70px 20px;
 text-align:center;
@@ -349,6 +180,7 @@ cursor:pointer;
 font-weight:bold;
 }
 
+/* ===== Status Styles ===== */
 .status{
 padding:70px 20px;
 text-align:center;
@@ -362,6 +194,88 @@ border-radius:14px;
 font-size:20px;
 font-weight:bold;
 }
+
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">
+Pasiya Max Media
+</div>
+
+<nav>
+<a href="#">Home</a>
+<a href="#">About</a>
+<a href="#">AI</a>
+<a href="#">Projects</a>
+<a href="#">Contact</a>
+</nav>
+</header>
+
+<section class="hero">
+<h1>Future AI Platform</h1>
+<p>
+Welcome to the official Pasiya Max Media AI Platform.
+This website is designed to manage AI tools, websites,
+social media, automation and digital projects from one dashboard.
+</p>
+<button>
+Launch Dashboard
+</button>
 </section>
+
+<!-- AI Dashboard Section -->
+<section class="dashboard">
+<h2>🤖 AI Control Center</h2>
+<p class="sub">
+Manage your AI tools, websites and social media from one place.
+</p>
+
+<div class="dashboard-grid">
+<div class="dashboard-card">
+<h3>🤖 AI Assistant</h3>
+<p>Open your personal AI assistant dashboard.</p>
+<a href="#">Launch</a>
+</div>
+
+<div class="dashboard-card">
+<h3>🌐 Websites</h3>
+<p>Manage Blogger, GitHub Pages and Vercel.</p>
+<a href="#">Open</a>
+</div>
+
+<div class="dashboard-card">
+<h3>📱 Social Media</h3>
+<p>Access all your social platforms.</p>
+<a href="#">Open</a>
+</div>
+
+<div class="dashboard-card">
+<h3>📊 Analytics</h3>
+<p>Track website and social performance.</p>
+<a href="#">View</a>
+</div>
+</div>
+</section>
+
+<!-- Language -->
+<section class="language">
+<h2>🌍 Language</h2>
+<div class="language-buttons">
+<button>Sinhala</button>
+<button>English</button>
+</div>
+</section>
+
+<!-- Live Status -->
+<section class="status">
+<h2>System Status</h2>
+<div class="status-box">
+🟢 AI SYSTEM ONLINE
+</div>
+</section>
+
 </body>
-</html>
+</html> 
