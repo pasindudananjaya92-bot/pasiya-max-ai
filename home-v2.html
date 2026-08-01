@@ -23,6 +23,7 @@ font-family:'Poppins',sans-serif;
 body{
 background:#070b14;
 color:white;
+scroll-behavior: smooth;
 }
 
 header{
@@ -303,15 +304,15 @@ Pasiya Max Media
 </div>
 
 <nav>
-<a href="#">Home</a>
-<a href="#">About</a>
-<a href="#">AI</a>
-<a href="#">Projects</a>
-<a href="#">Contact</a>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#ai">AI</a>
+<a href="#social">Projects</a>
+<a href="#contact">Contact</a>
 </nav>
 </header>
 
-<section class="hero">
+<section class="hero" id="home">
 <h1>Future AI Platform</h1>
 <p>
 Welcome to the official Pasiya Max Media AI Platform.
@@ -324,7 +325,7 @@ Launch Dashboard
 </section>
 
 <!-- AI Dashboard Section -->
-<section class="dashboard">
+<section class="dashboard" id="ai">
 <h2>🤖 AI Control Center</h2>
 <p class="sub">
 Manage your AI tools, websites and social media from one place.
@@ -375,7 +376,7 @@ Manage your AI tools, websites and social media from one place.
 </section>
 
 <!-- Social Hub -->
-<section class="social-hub">
+<section class="social-hub" id="social">
 <h2>🌐 My Digital Network</h2>
 <p>
 Connect with all Pasiya Max Media platforms.
@@ -409,7 +410,7 @@ Connect with all Pasiya Max Media platforms.
 </section>
 
 <!-- About -->
-<section class="about">
+<section class="about" id="about">
 <h2>👤 About Me</h2>
 <p>
 Hi, I'm <strong>Pasindu Dananjaya</strong> from
@@ -420,7 +421,7 @@ automation systems and digital platforms.
 </section>
 
 <!-- Contact -->
-<section class="contact">
+<section class="contact" id="contact">
 <h2>📞 Contact</h2>
 <div class="contact-box">
 <p>📧 pasindudananjaya92@gmail.com</p>
@@ -437,6 +438,21 @@ automation systems and digital platforms.
 Powered by AI • GitHub Pages • Botpress
 </p>
 </footer>
+
+<!-- Botpress Webchat Script -->
+<script src="https://cdn.botpress.cloud/webchat/v3.7/inject.js"></script>
+<script>
+window.botpress.init({
+  botId: "WPR56EUS",
+  clientId: "WPR56EUS",
+  configuration: {
+    color: "#00e5ff",
+    themeMode: "dark",
+    variant: "solid",
+    fontFamily: "inter"
+  }
+});
+</script>
 
 </body>
 </html>
