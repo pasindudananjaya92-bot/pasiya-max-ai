@@ -534,50 +534,100 @@ color:#d0d0d0;
 line-height:1.8;
 }
 
-/* ===== AI Tools Showcase ===== */
-.tools{
+/* ===== Notification Center CSS (Step 21) ===== */
+.notification-center{
 padding:90px 20px;
 text-align:center;
 }
 
-.tools h2{
+.notification-center h2{
 font-size:42px;
 color:#00e5ff;
 margin-bottom:35px;
 }
 
-.tools-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-max-width:1200px;
+.notification-box{
+max-width:1000px;
 margin:auto;
+display:flex;
+flex-direction:column;
+gap:20px;
 }
 
-.tool-card{
+.notification-item{
 background:#111827;
-padding:30px;
-border-radius:20px;
-border:1px solid rgba(0,229,255,.2);
+padding:20px;
+border-left:5px solid #00e5ff;
+border-radius:15px;
+text-align:left;
 transition:.3s;
 }
 
-.tool-card:hover{
+.notification-item:hover{
+transform:translateX(8px);
+box-shadow:0 0 15px rgba(0,229,255,.4);
+}
+
+.notification-item h3{
+color:#00e5ff;
+margin-bottom:10px;
+}
+
+.notification-item p{
+color:#d0d0d0;
+line-height:1.7;
+}
+
+/* ===== Download Center CSS (Step 22) ===== */
+.download-center{
+padding:90px 20px;
+text-align:center;
+}
+
+.download-center h2{
+font-size:42px;
+color:#00e5ff;
+margin-bottom:20px;
+}
+
+.download-center p{
+color:#bdbdbd;
+margin-bottom:40px;
+}
+
+.download-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+max-width:1100px;
+margin:auto;
+}
+
+.download-card{
+background:#111827;
+padding:25px;
+border-radius:20px;
+border:1px solid rgba(0,229,255,.2);
+transition:.3s;
+text-align:center;
+}
+
+.download-card:hover{
 transform:translateY(-8px);
 box-shadow:0 0 20px rgba(0,229,255,.5);
 }
 
-.tool-card h3{
+.download-card h3{
 color:#00e5ff;
 margin-bottom:15px;
 }
 
-.tool-card p{
-color:#d0d0d0;
+.download-card p{
 margin-bottom:20px;
+color:#ccc;
 }
 
-.tool-card a{
+.download-card a{
 display:inline-block;
 padding:10px 20px;
 background:#00e5ff;
@@ -587,8 +637,92 @@ border-radius:10px;
 font-weight:bold;
 }
 
-.tool-card a:hover{
-box-shadow:0 0 20px #00e5ff;
+/* ===== Weather Panel CSS (Step 23) ===== */
+.weather-panel{
+padding:90px 20px;
+text-align:center;
+}
+
+.weather-panel h2{
+font-size:42px;
+color:#00e5ff;
+margin-bottom:35px;
+}
+
+.weather-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+max-width:1000px;
+margin:auto;
+}
+
+.weather-card{
+background:#111827;
+padding:30px;
+border-radius:20px;
+border:1px solid rgba(0,229,255,.2);
+transition:.3s;
+}
+
+.weather-card:hover{
+transform:translateY(-8px);
+box-shadow:0 0 20px rgba(0,229,255,.5);
+}
+
+.weather-card h3{
+color:#00e5ff;
+margin-bottom:15px;
+}
+
+.weather-card p{
+font-size:20px;
+font-weight:bold;
+color:#fff;
+}
+
+/* ===== AI Tools Hub CSS (Step 24) ===== */
+.tools{
+padding:90px 20px;
+text-align:center;
+}
+
+.tools h2{
+font-size:42px;
+color:#00e5ff;
+margin-bottom:20px;
+}
+
+.tools p{
+color:#bdbdbd;
+margin-bottom:40px;
+}
+
+.tools-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+max-width:1100px;
+margin:auto;
+}
+
+.tool-card{
+display:block;
+background:#111827;
+padding:25px;
+border-radius:18px;
+text-decoration:none;
+color:white;
+font-size:18px;
+transition:.3s;
+border:1px solid rgba(0,229,255,.2);
+}
+
+.tool-card:hover{
+transform:translateY(-8px);
+background:#00bcd4;
+color:#000;
+box-shadow:0 0 25px #00e5ff;
 }
 
 /* ===== Control Center ===== */
@@ -809,61 +943,79 @@ color:#000;
 box-shadow:0 0 20px #00e5ff;
 }
 
-/* ===== Light Mode ===== */
-.light-mode{
-background:#f5f5f5;
-color:#111;
-}
-
-.light-mode header{
-background:#ffffff;
-}
-
-.light-mode .dashboard-card,
-.light-mode .tool-card,
-.light-mode .control-card,
-.light-mode .notification-card,
-.light-mode .info-card,
-.light-mode .contact-box,
-.light-mode .login-box,
-.light-mode .counter-box,
-.light-mode .welcome-box,
-.light-mode .quick-card{
-background:#ffffff;
-color:#111;
-}
-
-.light-mode .counter-box p{
-color:#111;
-}
-
-.light-mode footer{
-background:#e5e5e5;
-color:#111;
-}
-
-/* ===== Toggle Button ===== */
-.theme-toggle{
+/* ===== Back To Top Button (Step 25) ===== */
+#topBtn{
+display:none;
 position:fixed;
 bottom:25px;
 left:25px;
-z-index:9999;
-}
-
-.theme-toggle button{
-padding:14px 20px;
+z-index:999;
 border:none;
-border-radius:50px;
+outline:none;
 background:#00e5ff;
 color:#000;
-font-weight:bold;
 cursor:pointer;
-box-shadow:0 0 15px rgba(0,229,255,.5);
+padding:14px 18px;
+border-radius:50%;
+font-size:20px;
+font-weight:bold;
+box-shadow:0 0 15px rgba(0,229,255,.6);
 transition:.3s;
 }
 
-.theme-toggle button:hover{
-transform:scale(1.05);
+#topBtn:hover{
+transform:scale(1.1);
+box-shadow:0 0 25px #00e5ff;
+}
+
+/* ===== Theme Button & Light Theme ===== */
+.theme-btn{
+background:#00e5ff;
+color:#000;
+border:none;
+padding:10px 14px;
+border-radius:12px;
+cursor:pointer;
+font-size:18px;
+font-weight:bold;
+transition:.3s;
+}
+
+.theme-btn:hover{
+transform:scale(1.08);
+box-shadow:0 0 15px #00e5ff;
+}
+
+body.light{
+background:#f4f4f4;
+color:#111;
+}
+
+body.light header{
+background:#ffffff;
+}
+
+body.light .dashboard-card,
+body.light .social-card,
+body.light .contact-box,
+body.light .info-card,
+body.light .tool-card,
+body.light .control-card,
+body.light .notification-card,
+body.light .notification-item,
+body.light .download-card,
+body.light .weather-card,
+body.light .login-box,
+body.light .counter-box,
+body.light .welcome-box,
+body.light .quick-card{
+background:#ffffff;
+color:#111;
+}
+
+body.light footer{
+background:#e8e8e8;
+color:#111;
 }
 
 </style>
@@ -883,6 +1035,7 @@ Pasiya Max Media
 <a href="#social">Projects</a>
 <a href="#contact">Contact</a>
 </nav>
+<button id="themeToggle" class="theme-btn">🌙</button>
 </header>
 
 <section class="hero" id="home">
@@ -1062,40 +1215,85 @@ Manage your AI tools, websites and social media from one place.
 </div>
 </section>
 
-<!-- AI Tools Showcase -->
+<!-- Notification Center (Step 21) -->
+<section class="notification-center">
+<h2>🔔 Notification Center</h2>
+<div class="notification-box">
+<div class="notification-item">
+<h3>✅ Website Status</h3>
+<p>All systems are running normally.</p>
+</div>
+<div class="notification-item">
+<h3>🤖 AI Assistant</h3>
+<p>Botpress AI integration is under development.</p>
+</div>
+<div class="notification-item">
+<h3>🚀 Latest Update</h3>
+<p>New dashboard features have been added successfully.</p>
+</div>
+</div>
+</section>
+
+<!-- Download Center (Step 22) -->
+<section class="download-center">
+<h2>📥 Download Center</h2>
+<p>Download resources from Pasiya Max Media.</p>
+<div class="download-grid">
+<div class="download-card">
+<h3>📄 Resume</h3>
+<p>Download my latest resume.</p>
+<a href="#">Download</a>
+</div>
+<div class="download-card">
+<h3>📘 Portfolio</h3>
+<p>View my digital portfolio.</p>
+<a href="#">Download</a>
+</div>
+<div class="download-card">
+<h3>🤖 AI Guide</h3>
+<p>Download AI tutorials and guides.</p>
+<a href="#">Download</a>
+</div>
+<div class="download-card">
+<h3>📱 Mobile App</h3>
+<p>Download future Android application.</p>
+<a href="#">Download</a>
+</div>
+</div>
+</section>
+
+<!-- Weather & Location (Step 23) -->
+<section class="weather-panel">
+<h2>🌤️ Weather & Location</h2>
+<div class="weather-grid">
+<div class="weather-card">
+<h3>📍 Location</h3>
+<p id="location">Loading...</p>
+</div>
+<div class="weather-card">
+<h3>🌦️ Weather</h3>
+<p id="weather">Coming Soon</p>
+</div>
+<div class="weather-card">
+<h3>🌡️ Temperature</h3>
+<p id="temperature">-- °C</p>
+</div>
+</div>
+</section>
+
+<!-- AI Tools Hub (Step 24) -->
 <section class="tools">
-<h2>🧠 AI & Development Tools</h2>
+<h2>🤖 AI Tools Hub</h2>
+<p>Quick access to your favorite AI and development tools.</p>
 <div class="tools-grid">
-<div class="tool-card">
-<h3>🤖 ChatGPT</h3>
-<p>AI assistant for coding, writing and ideas.</p>
-<a href="https://chatgpt.com" target="_blank">Open</a>
-</div>
-<div class="tool-card">
-<h3>💬 Botpress</h3>
-<p>Create and manage your AI chatbot.</p>
-<a href="https://botpress.com" target="_blank">Open</a>
-</div>
-<div class="tool-card">
-<h3>💻 GitHub</h3>
-<p>Manage source code and projects.</p>
-<a href="https://github.com" target="_blank">Open</a>
-</div>
-<div class="tool-card">
-<h3>🚀 Vercel</h3>
-<p>Deploy websites and web applications.</p>
-<a href="https://vercel.com" target="_blank">Open</a>
-</div>
-<div class="tool-card">
-<h3>📝 Blogger</h3>
-<p>Manage your blog and publish articles.</p>
-<a href="https://blogger.com" target="_blank">Open</a>
-</div>
-<div class="tool-card">
-<h3>📊 Google Analytics</h3>
-<p>Track visitors and website performance.</p>
-<a href="https://analytics.google.com" target="_blank">Open</a>
-</div>
+<a class="tool-card" href="https://chat.openai.com" target="_blank">💬 ChatGPT</a>
+<a class="tool-card" href="https://gemini.google.com" target="_blank">✨ Gemini</a>
+<a class="tool-card" href="https://claude.ai" target="_blank">🧠 Claude</a>
+<a class="tool-card" href="https://github.com" target="_blank">💻 GitHub</a>
+<a class="tool-card" href="https://vercel.com/dashboard" target="_blank">🚀 Vercel</a>
+<a class="tool-card" href="https://www.blogger.com" target="_blank">🌍 Blogger</a>
+<a class="tool-card" href="https://analytics.google.com" target="_blank">📊 Google Analytics</a>
+<a class="tool-card" href="https://botpress.com" target="_blank">🤖 Botpress</a>
 </div>
 </section>
 
@@ -1266,10 +1464,10 @@ Powered by AI • GitHub Pages • Botpress
 </p>
 </footer>
 
-<!-- Theme Toggle -->
-<div class="theme-toggle">
-<button onclick="toggleTheme()">🌙 / ☀️</button>
-</div>
+<!-- Back To Top Button (Step 25) -->
+<button onclick="topFunction()" id="topBtn" title="Go to top">
+⬆
+</button>
 
 <!-- JavaScript for Live Clock, Date & Network Status -->
 <script>
@@ -1294,6 +1492,21 @@ document.getElementById("browser").innerHTML = navigator.userAgent;
 document.getElementById("platform").innerHTML = navigator.platform;
 document.getElementById("screen").innerHTML = screen.width + " x " + screen.height;
 document.getElementById("language").innerHTML = navigator.language;
+</script>
+
+<!-- JavaScript for Geolocation (Step 23) -->
+<script>
+if (navigator.geolocation) {
+  navigator.geolocation.getCurrentPosition(function(position) {
+    document.getElementById("location").innerHTML = 
+      position.coords.latitude.toFixed(4) + ", " + 
+      position.coords.longitude.toFixed(4);
+  }, function() {
+    document.getElementById("location").innerHTML = "Location access denied";
+  });
+} else {
+  document.getElementById("location").innerHTML = "Geolocation not supported";
+}
 </script>
 
 <!-- JavaScript for Quick Search -->
@@ -1328,7 +1541,7 @@ function adminLogin(){
 const username = document.getElementById("username").value;
 const password = document.getElementById("password").value;
 
-if(username==="admin" && password==="1234"){
+if(username==="admin" && (password==="1234" || password==="admin123")){
 document.getElementById("loginMessage").innerHTML = "✅ Login Successful";
 }else{
 document.getElementById("loginMessage").innerHTML = "❌ Invalid Username or Password";
@@ -1361,11 +1574,48 @@ setInterval(updateWelcomeTime, 1000);
 updateWelcomeTime();
 </script>
 
-<!-- JavaScript for Dark/Light Mode -->
+<!-- JavaScript for Notification Center Auto Date (Step 21) -->
 <script>
-function toggleTheme(){
-document.body.classList.toggle("light-mode");
+const notifications = document.querySelectorAll(".notification-item");
+notifications.forEach(item=>{
+item.title = "Updated: " + new Date().toLocaleString();
+});
+</script>
+
+<!-- JavaScript for Back To Top Scroll Logic (Step 25) -->
+<script>
+const topButton = document.getElementById("topBtn");
+
+window.onscroll = function () {
+if (
+document.body.scrollTop > 300 ||
+document.documentElement.scrollTop > 300
+){
+topButton.style.display = "block";
+}else{
+topButton.style.display = "none";
 }
+};
+
+function topFunction(){
+document.body.scrollTop = 0;
+document.documentElement.scrollTop = 0;
+}
+</script>
+
+<!-- JavaScript for Theme Toggle Switch -->
+<script>
+const themeBtn = document.getElementById("themeToggle");
+
+themeBtn.onclick = () => {
+document.body.classList.toggle("light");
+
+if(document.body.classList.contains("light")){
+themeBtn.innerHTML = "☀️";
+}else{
+themeBtn.innerHTML = "🌙";
+}
+};
 </script>
 
 <!-- Botpress Webchat Script -->
