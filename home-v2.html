@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -275,6 +275,26 @@ text-align:center;
 background:#111827;
 color:#9ca3af;
 border-top:1px solid rgba(0,255,255,.2);
+}
+
+.footer-links{
+margin-top:20px;
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:15px;
+}
+
+.footer-links a{
+color:#00e5ff;
+text-decoration:none;
+font-weight:bold;
+transition:.3s;
+}
+
+.footer-links a:hover{
+color:#ffffff;
+text-shadow:0 0 10px #00e5ff;
 }
 
 /* ===== Hero Buttons ===== */
@@ -1029,11 +1049,12 @@ Pasiya Max Media
 </div>
 
 <nav>
-<a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#ai">AI</a>
-<a href="#social">Projects</a>
-<a href="#contact">Contact</a>
+<a href="#home">🏠 Home</a>
+<a href="#ai">🤖 AI</a>
+<a href="#social">🌐 Projects</a>
+<a href="#tools">🛠️ Tools</a>
+<a href="#about">👤 About</a>
+<a href="#contact">📞 Contact</a>
 </nav>
 <button id="themeToggle" class="theme-btn">🌙</button>
 </header>
@@ -1047,7 +1068,7 @@ social media, automation and digital projects from one dashboard.
 </p>
 
 <div class="hero-buttons">
-<a href="#ai" class="btn btn-primary">
+<a href="https://cdn.botpress.cloud/webchat/v3.7/shareable.html?configUrl=https://files.bpcontent.cloud/2026/06/01/11/20260601113625-WPR56EUS.json" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
 🚀 Launch Dashboard
 </a>
 <a href="#contact" class="btn btn-secondary">
@@ -1067,25 +1088,25 @@ Manage your AI tools, websites and social media from one place.
 <div class="dashboard-card">
 <h3>🤖 AI Assistant</h3>
 <p>Open your personal AI assistant dashboard.</p>
-<a href="https://studio.botpress.cloud/2072ec12-590c-48ee-8886-a7662fdd8fcf/flows/wf-main?search=Telegram" target="_blank">Launch</a>
+<a href="https://cdn.botpress.cloud/webchat/v3.7/shareable.html?configUrl=https://files.bpcontent.cloud/2026/06/01/11/20260601113625-WPR56EUS.json" target="_blank" rel="noopener noreferrer">Launch</a>
 </div>
 
 <div class="dashboard-card">
 <h3>🌐 Websites</h3>
 <p>Manage Blogger, GitHub Pages and Vercel.</p>
-<a href="#">Open</a>
+<a href="https://pasiyamax.vercel.app/" target="_blank" rel="noopener noreferrer">Open</a>
 </div>
 
 <div class="dashboard-card">
 <h3>📱 Social Media</h3>
 <p>Access all your social platforms.</p>
-<a href="#">Open</a>
+<a href="https://www.facebook.com/share/18xRGhYVUo/" target="_blank" rel="noopener noreferrer">Open</a>
 </div>
 
 <div class="dashboard-card">
 <h3>📊 Analytics</h3>
 <p>Track website and social performance.</p>
-<a href="#" target="_blank">View</a>
+<a href="https://analytics.google.com" target="_blank" rel="noopener noreferrer">View</a>
 </div>
 </div>
 </section>
@@ -1122,40 +1143,46 @@ Manage your AI tools, websites and social media from one place.
 <section class="quick-access">
 <h2>⚡ Quick Access</h2>
 <div class="quick-grid">
-<a class="quick-card" href="https://mamageblog.blogspot.com" target="_blank">
+<a class="quick-card" href="https://mamageblog.blogspot.com" target="_blank" rel="noopener noreferrer">
 <div style="font-size:45px;">🌍</div>
 <h3>Blogger</h3>
 <p>Open Blog</p>
 </a>
 
-<a class="quick-card" href="https://pasiyamax.vercel.app" target="_blank">
+<a class="quick-card" href="https://pasiyamax.vercel.app" target="_blank" rel="noopener noreferrer">
 <div style="font-size:45px;">🚀</div>
 <h3>Vercel</h3>
 <p>Open Website</p>
 </a>
 
-<a class="quick-card" href="https://github.com/pasindudananjaya92-bot/pasiya-max-ai" target="_blank">
+<a class="quick-card" href="https://github.com/pasindudananjaya92-bot/pasiya-max-ai" target="_blank" rel="noopener noreferrer">
 <div style="font-size:45px;">💻</div>
 <h3>GitHub</h3>
 <p>Repository</p>
 </a>
 
-<a class="quick-card" href="https://studio.botpress.cloud/2072ec12-590c-48ee-8886-a7662fdd8fcf/flows/wf-main?search=Telegram" target="_blank">
+<a class="quick-card" href="https://cdn.botpress.cloud/webchat/v3.7/shareable.html?configUrl=https://files.bpcontent.cloud/2026/06/01/11/20260601113625-WPR56EUS.json" target="_blank" rel="noopener noreferrer">
 <div style="font-size:45px;">🤖</div>
 <h3>Botpress</h3>
 <p>AI Assistant</p>
 </a>
 
-<a class="quick-card" href="#" target="_blank">
+<a class="quick-card" href="https://analytics.google.com" target="_blank" rel="noopener noreferrer">
 <div style="font-size:45px;">📊</div>
 <h3>Analytics</h3>
 <p>Statistics</p>
 </a>
 
-<a class="quick-card" href="https://t.me/" target="_blank">
+<a class="quick-card" href="https://t.me/" target="_blank" rel="noopener noreferrer">
 <div style="font-size:45px;">📱</div>
 <h3>Telegram</h3>
 <p>Open Bot</p>
+</a>
+
+<a class="quick-card" href="https://pasindudananjaya.substack.com" target="_blank" rel="noopener noreferrer">
+<div style="font-size:45px;">📬</div>
+<h3>Substack</h3>
+<p>Read My Articles</p>
 </a>
 </div>
 </section>
@@ -1242,22 +1269,22 @@ Manage your AI tools, websites and social media from one place.
 <div class="download-card">
 <h3>📄 Resume</h3>
 <p>Download my latest resume.</p>
-<a href="https://drive.google.com/file/d/1Ra6eeoKSj5U7EQLz60wJPYngiX0br842/view?usp=drivesdk" target="_blank">Download</a>
+<a href="https://drive.google.com/file/d/1Ra6eeoKSj5U7EQLz60wJPYngiX0br842/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">Download</a>
 </div>
 <div class="download-card">
 <h3>📘 Portfolio</h3>
 <p>View my digital portfolio.</p>
-<a href="https://docs.google.com/document/d/1uZ0GrafcYXeePVN6MxNTXf_hITNbaERkk5k8JGgkF00/edit?usp=drivesdk" target="_blank">Download</a>
+<a href="https://docs.google.com/document/d/1uZ0GrafcYXeePVN6MxNTXf_hITNbaERkk5k8JGgkF00/edit?usp=drivesdk" target="_blank" rel="noopener noreferrer">Download</a>
 </div>
 <div class="download-card">
 <h3>🤖 AI Guide</h3>
 <p>Download AI tutorials and guides.</p>
-<a href="https://drive.google.com/file/d/1HCpWWJIH7-ppdaCKbbgU69iQIIq2EQrT/view?usp=drivesdk" target="_blank">Download</a>
+<a href="https://drive.google.com/file/d/1HCpWWJIH7-ppdaCKbbgU69iQIIq2EQrT/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">Download</a>
 </div>
 <div class="download-card">
 <h3>📱 Mobile App</h3>
 <p>Download future Android application.</p>
-<a href="https://drive.google.com/file/d/1Qak-iXQdyM2cTwxgv2vbVphG0vFH-FJ4/view?usp=drivesdk" target="_blank">Download</a>
+<a href="https://drive.google.com/file/d/1Qak-iXQdyM2cTwxgv2vbVphG0vFH-FJ4/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">Download</a>
 </div>
 </div>
 </section>
@@ -1272,58 +1299,62 @@ Manage your AI tools, websites and social media from one place.
 </div>
 <div class="weather-card">
 <h3>🌦️ Weather</h3>
-<p id="weather">Coming Soon</p>
+<p id="weather">Loading...</p>
 </div>
 <div class="weather-card">
 <h3>🌡️ Temperature</h3>
-<p id="temperature">-- °C</p>
+<p id="temperature">Loading...</p>
 </div>
 </div>
 </section>
 
 <!-- AI Tools Hub (Step 24) -->
-<section class="tools">
+<section class="tools" id="tools">
 <h2>🤖 AI Tools Hub</h2>
 <p>Quick access to your favorite AI and development tools.</p>
 <div class="tools-grid">
-<a class="tool-card" href="https://chat.openai.com" target="_blank">💬 ChatGPT</a>
-<a class="tool-card" href="https://gemini.google.com" target="_blank">✨ Gemini</a>
-<a class="tool-card" href="https://claude.ai" target="_blank">🧠 Claude</a>
-<a class="tool-card" href="https://github.com" target="_blank">💻 GitHub</a>
-<a class="tool-card" href="https://vercel.com/dashboard" target="_blank">🚀 Vercel</a>
-<a class="tool-card" href="https://www.blogger.com" target="_blank">🌍 Blogger</a>
-<a class="tool-card" href="https://analytics.google.com" target="_blank">📊 Google Analytics</a>
-<a class="tool-card" href="https://botpress.com" target="_blank">🤖 Botpress</a>
+<a class="tool-card" href="https://chat.openai.com" target="_blank" rel="noopener noreferrer">💬 ChatGPT</a>
+<a class="tool-card" href="https://gemini.google.com" target="_blank" rel="noopener noreferrer">✨ Gemini</a>
+<a class="tool-card" href="https://claude.ai" target="_blank" rel="noopener noreferrer">🧠 Claude</a>
+<a class="tool-card" href="https://github.com" target="_blank" rel="noopener noreferrer">💻 GitHub</a>
+<a class="tool-card" href="https://vercel.com/dashboard" target="_blank" rel="noopener noreferrer">🚀 Vercel</a>
+<a class="tool-card" href="https://www.blogger.com" target="_blank" rel="noopener noreferrer">🌍 Blogger</a>
+<a class="tool-card" href="https://analytics.google.com" target="_blank" rel="noopener noreferrer">📊 Google Analytics</a>
+<a class="tool-card" href="https://cdn.botpress.cloud/webchat/v3.7/shareable.html?configUrl=https://files.bpcontent.cloud/2026/06/01/11/20260601113625-WPR56EUS.json" target="_blank" rel="noopener noreferrer">🤖 Botpress</a>
 </div>
 </section>
 
 <!-- Control Center -->
-<section class="control-center">
+<section class="control-center" id="control">
 <h2>🚀 My Control Center</h2>
 <div class="control-grid">
 <div class="control-card">
 <h3>🌍 My Blogger</h3>
-<a href="https://mamageblog.blogspot.com" target="_blank">Open Blogger</a>
+<a href="https://mamageblog.blogspot.com" target="_blank" rel="noopener noreferrer">Open Blogger</a>
 </div>
 <div class="control-card">
 <h3>🚀 My Vercel</h3>
-<a href="https://pasiyamax.vercel.app" target="_blank">Open Vercel</a>
+<a href="https://pasiyamax.vercel.app" target="_blank" rel="noopener noreferrer">Open Vercel</a>
 </div>
 <div class="control-card">
 <h3>💻 My GitHub</h3>
-<a href="https://github.com/pasindudananjaya92-bot/pasiya-max-ai" target="_blank">Open GitHub</a>
+<a href="https://github.com/pasindudananjaya92-bot/pasiya-max-ai" target="_blank" rel="noopener noreferrer">Open GitHub</a>
 </div>
 <div class="control-card">
 <h3>📘 Facebook Page</h3>
-<a href="https://www.facebook.com/share/18xRGhYVUo/" target="_blank">Open Facebook</a>
+<a href="https://www.facebook.com/share/18xRGhYVUo/" target="_blank" rel="noopener noreferrer">Open Facebook</a>
 </div>
 <div class="control-card">
 <h3>📸 Instagram</h3>
-<a href="https://www.instagram.com/pasindu5598" target="_blank">Open Instagram</a>
+<a href="https://www.instagram.com/pasindu5598" target="_blank" rel="noopener noreferrer">Open Instagram</a>
 </div>
 <div class="control-card">
 <h3>▶️ YouTube</h3>
-<a href="https://youtube.com/@pasya" target="_blank">Open YouTube</a>
+<a href="https://youtube.com/@pasya" target="_blank" rel="noopener noreferrer">Open YouTube</a>
+</div>
+<div class="control-card">
+<h3>📬 My Substack</h3>
+<a href="https://pasindudananjaya.substack.com" target="_blank" rel="noopener noreferrer">Open Substack</a>
 </div>
 </div>
 </section>
@@ -1365,25 +1396,25 @@ automation and digital projects from one place.
 <section class="quick-actions">
 <h2>⚡ Quick Actions</h2>
 <div class="quick-grid">
-<a class="quick-card" href="https://mamageblog.blogspot.com" target="_blank">
+<a class="quick-card" href="https://mamageblog.blogspot.com" target="_blank" rel="noopener noreferrer">
 🌍 Blogger
 </a>
-<a class="quick-card" href="https://github.com/pasindudananjaya92-bot/pasiya-max-ai" target="_blank">
+<a class="quick-card" href="https://github.com/pasindudananjaya92-bot/pasiya-max-ai" target="_blank" rel="noopener noreferrer">
 💻 GitHub
 </a>
-<a class="quick-card" href="https://pasiyamax.vercel.app" target="_blank">
+<a class="quick-card" href="https://pasiyamax.vercel.app" target="_blank" rel="noopener noreferrer">
 🚀 Vercel
 </a>
-<a class="quick-card" href="https://botpress.com" target="_blank">
+<a class="quick-card" href="https://cdn.botpress.cloud/webchat/v3.7/shareable.html" target="_blank" rel="noopener noreferrer">
 🤖 Botpress
 </a>
-<a class="quick-card" href="https://www.facebook.com/share/18xRGhYVUo/" target="_blank">
+<a class="quick-card" href="https://www.facebook.com/share/18xRGhYVUo/" target="_blank" rel="noopener noreferrer">
 📘 Facebook
 </a>
-<a class="quick-card" href="https://www.instagram.com/pasindu5598" target="_blank">
+<a class="quick-card" href="https://www.instagram.com/pasindu5598" target="_blank" rel="noopener noreferrer">
 📸 Instagram
 </a>
-<a class="quick-card" href="https://youtube.com/@pasya" target="_blank">
+<a class="quick-card" href="https://youtube.com/@pasya" target="_blank" rel="noopener noreferrer">
 ▶️ YouTube
 </a>
 <a class="quick-card" href="mailto:pasindudananjaya92@gmail.com">
@@ -1408,28 +1439,32 @@ Connect with all Pasiya Max Media platforms.
 </p>
 
 <div class="social-grid">
-<a class="social-card" href="https://mamageblog.blogspot.com" target="_blank">
+<a class="social-card" href="https://mamageblog.blogspot.com" target="_blank" rel="noopener noreferrer">
 🌍 Blogger
 </a>
 
-<a class="social-card" href="https://pasiyamax.vercel.app" target="_blank">
+<a class="social-card" href="https://pasiyamax.vercel.app" target="_blank" rel="noopener noreferrer">
 🚀 Vercel
 </a>
 
-<a class="social-card" href="https://github.com/pasindudananjaya92-bot/pasiya-max-ai" target="_blank">
+<a class="social-card" href="https://github.com/pasindudananjaya92-bot/pasiya-max-ai" target="_blank" rel="noopener noreferrer">
 💻 GitHub
 </a>
 
-<a class="social-card" href="https://youtube.com/@pasya" target="_blank">
+<a class="social-card" href="https://youtube.com/@pasya" target="_blank" rel="noopener noreferrer">
 ▶️ YouTube
 </a>
 
-<a class="social-card" href="https://www.facebook.com/share/18xRGhYVUo/" target="_blank">
+<a class="social-card" href="https://www.facebook.com/share/18xRGhYVUo/" target="_blank" rel="noopener noreferrer">
 📘 Facebook
 </a>
 
-<a class="social-card" href="https://www.instagram.com/pasindu5598" target="_blank">
+<a class="social-card" href="https://www.instagram.com/pasindu5598" target="_blank" rel="noopener noreferrer">
 📸 Instagram
+</a>
+
+<a class="social-card" href="https://pasindudananjaya.substack.com" target="_blank" rel="noopener noreferrer">
+📬 Substack
 </a>
 </div>
 </section>
@@ -1452,16 +1487,42 @@ automation systems and digital platforms.
 <p>📧 pasindudananjaya92@gmail.com</p>
 <p>📱 +94 75 957 0743</p>
 <p>📱 +94 70 775 1710</p>
-<p>📍 45/Z, Pragathipura, Madiwela, Kotte</p>
+<p>📍 45/Z, Pragathipura, මඩිවෙල, කෝට්ටේ</p>
 </div>
 </section>
 
 <!-- Footer -->
 <footer>
-<h3>© 2026 Pasiya Max Media</h3>
-<p>
-Powered by AI • GitHub Pages • Botpress
-</p>
+    <h3>© 2026 Pasiya Max Media</h3>
+
+    <p>
+        Powered by AI • GitHub • Vercel • Botpress
+    </p>
+
+    <div class="footer-links">
+
+        <a href="https://pasiyamax.vercel.app" target="_blank" rel="noopener noreferrer">
+            🌐 Website
+        </a>
+
+        <a href="https://pasindudananjaya.substack.com" target="_blank" rel="noopener noreferrer">
+            📰 Substack
+        </a>
+
+        <a href="https://mamageblog.blogspot.com" target="_blank" rel="noopener noreferrer">
+            📝 Blogger
+        </a>
+
+        <a href="https://github.com/pasindudananjaya92-bot/pasiya-max-ai" target="_blank" rel="noopener noreferrer">
+            💻 GitHub
+        </a>
+
+    </div>
+
+    <p style="margin-top:20px;font-size:14px;color:#9ca3af;">
+        Designed & Developed by Pasindu Dananjaya
+    </p>
+
 </footer>
 
 <!-- Back To Top Button (Step 25) -->
@@ -1469,70 +1530,111 @@ Powered by AI • GitHub Pages • Botpress
 ⬆
 </button>
 
-<!-- JavaScript for Live Clock, Date & Network Status -->
+<!-- JavaScript for Live Clock, Date, Welcome Time & Network Status -->
 <script>
-function updateClock(){
+function updateDateTime(){
 const now = new Date();
-document.getElementById("clock").innerHTML = now.toLocaleTimeString("en-LK");
-document.getElementById("date").innerHTML = now.toLocaleDateString("en-GB", {
-  weekday: "long",
-  day: "numeric",
-  month: "long",
-  year: "numeric"
+document.getElementById("clock").textContent = now.toLocaleTimeString("en-LK");
+document.getElementById("date").textContent = now.toLocaleDateString("en-GB",{
+weekday: "long",
+day: "numeric",
+month: "long",
+year: "numeric"
 });
-document.getElementById("network").innerHTML = navigator.onLine ? "🟢 Online" : "🔴 Offline";
+document.getElementById("network").textContent = navigator.onLine ? "🟢 Online" : "🔴 Offline";
+document.getElementById("welcomeTime").textContent = "🇱🇰 Sri Lanka Time : " + now.toLocaleTimeString("en-GB");
 }
-setInterval(updateClock, 1000);
-updateClock();
+
+updateDateTime();
+setInterval(updateDateTime, 1000);
 </script>
 
 <!-- JavaScript for Device Information -->
 <script>
-document.getElementById("browser").innerHTML = navigator.userAgent;
-document.getElementById("platform").innerHTML = navigator.platform;
-document.getElementById("screen").innerHTML = screen.width + " x " + screen.height;
-document.getElementById("language").innerHTML = navigator.language;
+document.getElementById("browser").textContent = navigator.userAgent;
+document.getElementById("platform").textContent = navigator.platform;
+document.getElementById("screen").textContent = screen.width + " x " + screen.height;
+document.getElementById("language").textContent = navigator.language;
 </script>
 
-<!-- JavaScript for Geolocation (Step 23) -->
+<!-- JavaScript for Geolocation & Live Weather (Open-Meteo API) -->
 <script>
 if (navigator.geolocation) {
   navigator.geolocation.getCurrentPosition(function(position) {
-    document.getElementById("location").innerHTML = 
-      position.coords.latitude.toFixed(4) + ", " + 
-      position.coords.longitude.toFixed(4);
+    const lat = position.coords.latitude;
+    const lon = position.coords.longitude;
+    document.getElementById("location").textContent = lat.toFixed(4) + ", " + lon.toFixed(4);
+    
+    // Fetch live weather from open-meteo
+    fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true`)
+      .then(response => response.json())
+      .then(data => {
+        if(data && data.current_weather){
+          const temp = data.current_weather.temperature;
+          const code = data.current_weather.weathercode;
+          document.getElementById("temperature").textContent = temp + " °C";
+          document.getElementById("weather").textContent = "Code: " + code;
+        }
+      })
+      .catch(() => {
+        document.getElementById("weather").textContent = "Data unavailable";
+      });
+
   }, function() {
-    document.getElementById("location").innerHTML = "Location access denied";
+    document.getElementById("location").textContent = "Location access denied";
+    document.getElementById("weather").textContent = "Unavailable";
   });
 } else {
-  document.getElementById("location").innerHTML = "Geolocation not supported";
+  document.getElementById("location").textContent = "Geolocation not supported";
+  document.getElementById("weather").textContent = "Unavailable";
 }
 </script>
 
 <!-- JavaScript for Quick Search -->
 <script>
 function searchSection(){
-let value = document.getElementById("searchInput").value.toLowerCase().trim();
+const value = document.getElementById("searchInput").value.toLowerCase().trim();
 
-if(value=="home"){
-location.href="#home";
+const sections = {
+  home: "#home",
+  ai: "#ai",
+  about: "#about",
+  contact: "#contact",
+  social: "#social",
+  dashboard: "#ai",
+  language: ".language",
+  weather: ".weather-panel",
+  downloads: ".download-center",
+  download: ".download-center",
+  notification: ".notification-center",
+  notifications: ".notification-center",
+  device: ".device-panel",
+  search: ".search-section",
+  status: ".status",
+  visitor: ".visitor-counter",
+  welcome: ".welcome-panel",
+  tools: "#tools",
+  control: "#control",
+  admin: ".admin-login"
+};
+
+if(sections[value]){
+  const element = document.querySelector(sections[value]);
+  if(element){
+    element.scrollIntoView({
+      behavior: "smooth"
+    });
+  }
+}else{
+  alert("No matching section found.");
 }
-else if(value=="ai"){
-location.href="#ai";
 }
-else if(value=="about"){
-location.href="#about";
+
+document.getElementById("searchInput").addEventListener("keypress", function(event){
+if(event.key === "Enter"){
+searchSection();
 }
-else if(value=="contact"){
-location.href="#contact";
-}
-else if(value=="social"){
-location.href="#social";
-}
-else{
-alert("Section not found!");
-}
-}
+});
 </script>
 
 <!-- JavaScript for Admin Login -->
@@ -1542,9 +1644,9 @@ const username = document.getElementById("username").value;
 const password = document.getElementById("password").value;
 
 if(username==="admin" && (password==="1234" || password==="admin123")){
-document.getElementById("loginMessage").innerHTML = "✅ Login Successful";
+document.getElementById("loginMessage").textContent = "✅ Login Successful";
 }else{
-document.getElementById("loginMessage").innerHTML = "❌ Invalid Username or Password";
+document.getElementById("loginMessage").textContent = "❌ Invalid Username or Password";
 }
 }
 </script>
@@ -1561,20 +1663,10 @@ visits = parseInt(visits) + 1;
 
 localStorage.setItem("visitorCount", visits);
 
-document.getElementById("visitorCount").innerHTML = visits;
+document.getElementById("visitorCount").textContent = visits;
 </script>
 
-<!-- JavaScript for Welcome Panel Sri Lanka Time -->
-<script>
-function updateWelcomeTime(){
-const now = new Date();
-document.getElementById("welcomeTime").innerHTML = "🇱🇰 Sri Lanka Time : " + now.toLocaleTimeString("en-GB");
-}
-setInterval(updateWelcomeTime, 1000);
-updateWelcomeTime();
-</script>
-
-<!-- JavaScript for Notification Center Auto Date (Step 21) -->
+<!-- JavaScript for Notification Center Auto Date -->
 <script>
 const notifications = document.querySelectorAll(".notification-item");
 notifications.forEach(item=>{
@@ -1582,7 +1674,7 @@ item.title = "Updated: " + new Date().toLocaleString();
 });
 </script>
 
-<!-- JavaScript for Back To Top Scroll Logic (Step 25) -->
+<!-- JavaScript for Back To Top Scroll Logic -->
 <script>
 const topButton = document.getElementById("topBtn");
 
@@ -1603,25 +1695,34 @@ document.documentElement.scrollTop = 0;
 }
 </script>
 
-<!-- JavaScript for Theme Toggle Switch -->
+<!-- JavaScript for Theme Toggle Switch with LocalStorage -->
 <script>
 const themeBtn = document.getElementById("themeToggle");
 
-themeBtn.onclick = () => {
-document.body.classList.toggle("light");
-
-if(document.body.classList.contains("light")){
-themeBtn.innerHTML = "☀️";
-}else{
-themeBtn.innerHTML = "🌙";
+if (localStorage.getItem("theme") === "light") {
+  document.body.classList.add("light");
+  themeBtn.textContent = "☀️";
+} else {
+  themeBtn.textContent = "🌙";
 }
-};
+
+themeBtn.addEventListener("click", () => {
+  document.body.classList.toggle("light");
+
+  if (document.body.classList.contains("light")) {
+    localStorage.setItem("theme", "light");
+    themeBtn.textContent = "☀️";
+  } else {
+    localStorage.setItem("theme", "dark");
+    themeBtn.textContent = "🌙";
+  }
+});
 </script>
 
 <!-- Botpress Webchat Script -->
 <script src="https://cdn.botpress.cloud/webchat/v3.7/inject.js"></script>
 <script>
-window.botpress.init({
+(window.botpressWebChat = {}).init({
   botId: "WPR56EUS",
   clientId: "WPR56EUS",
   configuration: {
@@ -1635,3 +1736,4 @@ window.botpress.init({
 
 </body>
 </html>
+ 
