@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -55,16 +55,19 @@ gap:15px;
 }
 
 nav a{
-color:white;
+color:#ffffff;
 text-decoration:none;
 padding:10px 18px;
 border-radius:12px;
-transition:.3s;
+transition:all .3s ease;
+font-weight:600;
 }
 
 nav a:hover{
-background:#00bcd4;
+background:#00e5ff;
 color:#000;
+box-shadow:0 0 15px #00e5ff;
+transform:translateY(-2px);
 }
 
 .hero{
@@ -79,17 +82,19 @@ background:radial-gradient(circle at top,#10254f,#070b14);
 }
 
 .hero h1{
-font-size:60px;
+font-size:clamp(42px,6vw,70px);
 margin-bottom:20px;
 color:#00e5ff;
-text-shadow:0 0 20px #00e5ff;
+text-shadow:0 0 25px #00e5ff;
+font-weight:700;
 }
 
 .hero p{
-max-width:800px;
-font-size:20px;
+max-width:850px;
+font-size:22px;
 line-height:1.8;
-color:#cccccc;
+color:#d1d5db;
+margin:auto;
 }
 
 /* ===== Dashboard Styles ===== */
@@ -224,7 +229,7 @@ color:black;
 box-shadow:0 0 25px #00e5ff;
 }
 
-/* ===== Updated About, Contact & Footer Styles ===== */
+/* ===== About, Contact & Upgraded Professional Footer Styles (Step 16) ===== */
 .about{
 padding:90px 20px;
 text-align:center;
@@ -270,15 +275,27 @@ font-size:18px;
 
 footer{
 margin-top:70px;
-padding:35px;
+padding:40px 20px;
 text-align:center;
 background:#111827;
 color:#9ca3af;
 border-top:1px solid rgba(0,255,255,.2);
 }
 
+footer h2{
+color:#00e5ff;
+font-size:32px;
+margin-bottom:10px;
+}
+
+footer > p{
+color:#d1d5db;
+font-size:16px;
+margin-bottom:20px;
+}
+
 .footer-links{
-margin-top:20px;
+margin:25px 0;
 display:flex;
 justify-content:center;
 flex-wrap:wrap;
@@ -295,6 +312,18 @@ transition:.3s;
 .footer-links a:hover{
 color:#ffffff;
 text-shadow:0 0 10px #00e5ff;
+}
+
+.footer-copy{
+margin-top:20px;
+font-size:15px;
+color:#cbd5e1;
+}
+
+.footer-version{
+margin-top:10px;
+font-size:14px;
+color:#94a3b8;
 }
 
 /* ===== Hero Buttons ===== */
@@ -554,7 +583,7 @@ color:#d0d0d0;
 line-height:1.8;
 }
 
-/* ===== Notification Center CSS (Step 21) ===== */
+/* ===== Notification Center CSS ===== */
 .notification-center{
 padding:90px 20px;
 text-align:center;
@@ -598,7 +627,7 @@ color:#d0d0d0;
 line-height:1.7;
 }
 
-/* ===== Download Center CSS (Step 22) ===== */
+/* ===== Download Center CSS ===== */
 .download-center{
 padding:90px 20px;
 text-align:center;
@@ -657,7 +686,7 @@ border-radius:10px;
 font-weight:bold;
 }
 
-/* ===== Weather Panel CSS (Step 23) ===== */
+/* ===== Weather Panel CSS ===== */
 .weather-panel{
 padding:90px 20px;
 text-align:center;
@@ -701,7 +730,7 @@ font-weight:bold;
 color:#fff;
 }
 
-/* ===== AI Tools Hub CSS (Step 24) ===== */
+/* ===== AI Tools Hub CSS & AI Resource Center ===== */
 .tools{
 padding:90px 20px;
 text-align:center;
@@ -736,6 +765,7 @@ color:white;
 font-size:18px;
 transition:.3s;
 border:1px solid rgba(0,229,255,.2);
+text-align: left;
 }
 
 .tool-card:hover{
@@ -963,7 +993,7 @@ color:#000;
 box-shadow:0 0 20px #00e5ff;
 }
 
-/* ===== Back To Top Button (Step 25) ===== */
+/* ===== Back To Top Button ===== */
 #topBtn{
 display:none;
 position:fixed;
@@ -1038,10 +1068,145 @@ background:#e8e8e8;
 color:#111;
 }
 
+/* ===== Mouse Glow (Step 23 - CSS) ===== */
+#cursorGlow{
+position:fixed;
+width:20px;
+height:20px;
+background:#00e5ff;
+border-radius:50%;
+pointer-events:none;
+transform:translate(-50%,-50%);
+box-shadow:
+0 0 10px #00e5ff,
+0 0 25px #00e5ff,
+0 0 50px #00e5ff;
+z-index:999999;
+transition:
+width .2s,
+height .2s,
+background .2s;
+}
+
+@media (max-width:768px){
+#cursorGlow{
+display:none;
+}
+}
+
+/* ===== Scroll Progress Bar (Step 24 - CSS) ===== */
+#scrollProgress{
+position:fixed;
+top:0;
+left:0;
+width:0%;
+height:5px;
+background:linear-gradient(90deg,#00e5ff,#00ff99,#00e5ff);
+z-index:999999;
+box-shadow:0 0 15px #00e5ff;
+transition:width .1s linear;
+}
+
+/* ===== Network Status Banner (Step 21) ===== */
+#networkBanner {
+position: fixed;
+top: 10px;
+left: 50%;
+transform: translateX(-50%);
+padding: 12px 25px;
+border-radius: 12px;
+font-weight: bold;
+font-size: 16px;
+display: none;
+z-index: 100000;
+color: #fff;
+box-shadow: 0 0 20px rgba(0,0,0,.3);
+}
+
+#networkBanner.online {
+background: #16a34a;
+}
+
+#networkBanner.offline {
+background: #dc2626;
+}
+
+/* ===== Professional Preloader (Step 22) ===== */
+#preloader{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:#070b14;
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:999999;
+transition:opacity .6s ease, visibility .6s ease;
+}
+
+#preloader.hide{
+opacity:0;
+visibility:hidden;
+}
+
+.loader-box{
+text-align:center;
+}
+
+.loader-circle{
+width:80px;
+height:80px;
+border:6px solid rgba(255,255,255,.15);
+border-top:6px solid #00e5ff;
+border-radius:50%;
+margin:auto;
+animation:spin 1s linear infinite;
+}
+
+.loader-box h2{
+margin-top:25px;
+color:#00e5ff;
+font-size:30px;
+}
+
+.loader-box p{
+margin-top:10px;
+color:#cccccc;
+}
+
+@keyframes spin{
+0%{
+transform:rotate(0deg);
+}
+100%{
+transform:rotate(360deg);
+}
+}
+
 </style>
 </head>
 
 <body>
+
+<!-- ===== Scroll Progress Bar (Step 24 - HTML) ===== -->
+<div id="scrollProgress"></div>
+
+<!-- ===== Custom Cursor (Step 23 - HTML) ===== -->
+<div id="cursorGlow"></div>
+
+<!-- ===== Professional Preloader (Step 22) ===== -->
+<div id="preloader">
+<div class="loader-box">
+<div class="loader-circle"></div>
+<h2>Pasiya Max Media</h2>
+<p>Loading AI Platform...</p>
+</div>
+</div>
+
+<!-- Network Status Banner -->
+<div id="networkBanner"></div>
 
 <header>
 <div class="logo">
@@ -1052,29 +1217,40 @@ Pasiya Max Media
 <a href="#home">🏠 Home</a>
 <a href="#ai">🤖 AI</a>
 <a href="#social">🌐 Projects</a>
-<a href="#tools">🛠️ Tools</a>
 <a href="#about">👤 About</a>
 <a href="#contact">📞 Contact</a>
+<a href="https://pasindudananjaya.substack.com" target="_blank">📝 Blog</a>
 </nav>
+
 <button id="themeToggle" class="theme-btn">🌙</button>
 </header>
 
 <section class="hero" id="home">
-<h1>Future AI Platform</h1>
+
+<h1>🚀 Pasiya Max Media</h1>
+
 <p>
-Welcome to the official Pasiya Max Media AI Platform.
-This website is designed to manage AI tools, websites,
-social media, automation and digital projects from one dashboard.
+Your Personal AI & Digital Control Center.<br>
+Manage AI, Websites, Social Media, Automation,
+Development Projects and Digital Platforms from one place.
 </p>
 
 <div class="hero-buttons">
-<a href="https://cdn.botpress.cloud/webchat/v3.7/shareable.html?configUrl=https://files.bpcontent.cloud/2026/06/01/11/20260601113625-WPR56EUS.json" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-🚀 Launch Dashboard
+
+<a href="#ai" class="btn btn-primary">
+🤖 Open AI Dashboard
 </a>
-<a href="#contact" class="btn btn-secondary">
-📞 Contact Me
+
+<a href="#social" class="btn btn-secondary">
+🌐 My Projects
 </a>
+
+<a href="https://pasindudananjaya.substack.com" target="_blank" class="btn btn-secondary">
+📝 Read My Blog
+</a>
+
 </div>
+
 </section>
 
 <!-- AI Dashboard Section -->
@@ -1086,27 +1262,27 @@ Manage your AI tools, websites and social media from one place.
 
 <div class="dashboard-grid">
 <div class="dashboard-card">
-<h3>🤖 AI Assistant</h3>
-<p>Open your personal AI assistant dashboard.</p>
-<a href="https://cdn.botpress.cloud/webchat/v3.7/shareable.html?configUrl=https://files.bpcontent.cloud/2026/06/01/11/20260601113625-WPR56EUS.json" target="_blank" rel="noopener noreferrer">Launch</a>
-</div>
-
-<div class="dashboard-card">
 <h3>🌐 Websites</h3>
-<p>Manage Blogger, GitHub Pages and Vercel.</p>
-<a href="https://pasiyamax.vercel.app/" target="_blank" rel="noopener noreferrer">Open</a>
+<p>Open all Pasiya Max websites.</p>
+<a href="https://mamageblog.blogspot.com" target="_blank" rel="noopener noreferrer">
+🌐 Open Websites
+</a>
 </div>
 
 <div class="dashboard-card">
 <h3>📱 Social Media</h3>
-<p>Access all your social platforms.</p>
-<a href="https://www.facebook.com/share/18xRGhYVUo/" target="_blank" rel="noopener noreferrer">Open</a>
+<p>Facebook, Instagram, YouTube and Substack.</p>
+<a href="https://www.facebook.com/share/18xRGhYVUo/" target="_blank" rel="noopener noreferrer">
+📱 Open Social Hub
+</a>
 </div>
 
 <div class="dashboard-card">
 <h3>📊 Analytics</h3>
-<p>Track website and social performance.</p>
-<a href="https://analytics.google.com" target="_blank" rel="noopener noreferrer">View</a>
+<p>Analytics dashboard will be available soon.</p>
+<a href="https://github.com/pasindudananjaya92-bot/pasiya-max-ai" target="_blank" rel="noopener noreferrer">
+📊 Coming Soon
+</a>
 </div>
 </div>
 </section>
@@ -1214,7 +1390,7 @@ Manage your AI tools, websites and social media from one place.
 <section class="search-section">
 <h2>🔍 Quick Search</h2>
 <div class="search-box">
-<input type="text" id="searchInput" placeholder="Type Home, AI, About, Contact...">
+<input type="text" id="searchInput" placeholder="Type home, ai, about, contact, blog, github...">
 <button onclick="searchSection()">Search</button>
 </div>
 </section>
@@ -1242,7 +1418,7 @@ Manage your AI tools, websites and social media from one place.
 </div>
 </section>
 
-<!-- Notification Center (Step 21) -->
+<!-- Notification Center -->
 <section class="notification-center">
 <h2>🔔 Notification Center</h2>
 <div class="notification-box">
@@ -1261,35 +1437,48 @@ Manage your AI tools, websites and social media from one place.
 </div>
 </section>
 
-<!-- Download Center (Step 22) -->
+<!-- Download Center -->
 <section class="download-center">
 <h2>📥 Download Center</h2>
 <p>Download resources from Pasiya Max Media.</p>
 <div class="download-grid">
+
 <div class="download-card">
 <h3>📄 Resume</h3>
 <p>Download my latest resume.</p>
-<a href="https://drive.google.com/file/d/1Ra6eeoKSj5U7EQLz60wJPYngiX0br842/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">Download</a>
+<a href="https://drive.google.com/file/d/1Ra6eeoKSj5U7EQLz60wJPYngiX0br842/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">
+📥 Download PDF
+</a>
 </div>
+
 <div class="download-card">
-<h3>📘 Portfolio</h3>
+<h3>📁 Portfolio</h3>
 <p>View my digital portfolio.</p>
-<a href="https://docs.google.com/document/d/1uZ0GrafcYXeePVN6MxNTXf_hITNbaERkk5k8JGgkF00/edit?usp=drivesdk" target="_blank" rel="noopener noreferrer">Download</a>
+<a href="https://docs.google.com/document/d/1uZ0GrafcYXeePVN6MxNTXf_hITNbaERkk5k8JGgkF00/edit?usp=drivesdk" target="_blank" rel="noopener noreferrer">
+📂 Open Portfolio
+</a>
 </div>
+
 <div class="download-card">
 <h3>🤖 AI Guide</h3>
-<p>Download AI tutorials and guides.</p>
-<a href="https://drive.google.com/file/d/1HCpWWJIH7-ppdaCKbbgU69iQIIq2EQrT/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">Download</a>
+<p>AI tutorials and learning resources.</p>
+<a href="https://drive.google.com/file/d/1HCpWWJIH7-ppdaCKbbgU69iQIIq2EQrT/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">
+📘 Download Guide
+</a>
 </div>
+
 <div class="download-card">
-<h3>📱 Mobile App</h3>
-<p>Download future Android application.</p>
-<a href="https://drive.google.com/file/d/1Qak-iXQdyM2cTwxgv2vbVphG0vFH-FJ4/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">Download</a>
+<h3>📱 Android App</h3>
+<p>Future Android application.</p>
+<a href="https://drive.google.com/file/d/1Qak-iXQdyM2cTwxgv2vbVphG0vFH-FJ4/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">
+📥 Download APK
+</a>
 </div>
+
 </div>
 </section>
 
-<!-- Weather & Location (Step 23) -->
+<!-- Weather & Location -->
 <section class="weather-panel">
 <h2>🌤️ Weather & Location</h2>
 <div class="weather-grid">
@@ -1299,7 +1488,7 @@ Manage your AI tools, websites and social media from one place.
 </div>
 <div class="weather-card">
 <h3>🌦️ Weather</h3>
-<p id="weather">Loading...</p>
+<p id="weather">Waiting for Live Weather API...</p>
 </div>
 <div class="weather-card">
 <h3>🌡️ Temperature</h3>
@@ -1308,7 +1497,7 @@ Manage your AI tools, websites and social media from one place.
 </div>
 </section>
 
-<!-- AI Tools Hub (Step 24) -->
+<!-- AI Tools Hub -->
 <section class="tools" id="tools">
 <h2>🤖 AI Tools Hub</h2>
 <p>Quick access to your favorite AI and development tools.</p>
@@ -1357,6 +1546,86 @@ Manage your AI tools, websites and social media from one place.
 <a href="https://pasindudananjaya.substack.com" target="_blank" rel="noopener noreferrer">Open Substack</a>
 </div>
 </div>
+</section>
+
+<!-- ===== AI Resource Center ===== -->
+
+<section class="tools">
+
+<h2>🌍 AI Resource Center</h2>
+
+<p>
+Free AI Platforms, Admin Panels, APIs and Developer Tools
+</p>
+
+<div class="tools-grid">
+
+<a class="tool-card" href="https://openai.com" target="_blank">
+🤖 OpenAI
+</a>
+
+<a class="tool-card" href="https://platform.openai.com" target="_blank">
+🔑 OpenAI API
+</a>
+
+<a class="tool-card" href="https://botpress.com" target="_blank">
+🤖 Botpress
+</a>
+
+<a class="tool-card" href="https://studio.botpress.cloud" target="_blank">
+🎯 Botpress Studio
+</a>
+
+<a class="tool-card" href="https://cloud.google.com" target="_blank">
+☁ Google Cloud
+</a>
+
+<a class="tool-card" href="https://console.cloud.google.com" target="_blank">
+🖥 Google Console
+</a>
+
+<a class="tool-card" href="https://vercel.com" target="_blank">
+🚀 Vercel
+</a>
+
+<a class="tool-card" href="https://github.com" target="_blank">
+💻 GitHub
+</a>
+
+<a class="tool-card" href="https://www.netlify.com" target="_blank">
+🌐 Netlify
+</a>
+
+<a class="tool-card" href="https://render.com" target="_blank">
+⚡ Render
+</a>
+
+<a class="tool-card" href="https://railway.app" target="_blank">
+🚂 Railway
+</a>
+
+<a class="tool-card" href="https://supabase.com" target="_blank">
+🗄 Supabase
+</a>
+
+<a class="tool-card" href="https://firebase.google.com" target="_blank">
+🔥 Firebase
+</a>
+
+<a class="tool-card" href="https://huggingface.co" target="_blank">
+🤗 Hugging Face
+</a>
+
+<a class="tool-card" href="https://replicate.com" target="_blank">
+🎨 Replicate AI
+</a>
+
+<a class="tool-card" href="https://www.cloudflare.com" target="_blank">
+🛡 Cloudflare
+</a>
+
+</div>
+
 </section>
 
 <!-- Admin Login -->
@@ -1491,41 +1760,44 @@ automation systems and digital platforms.
 </div>
 </section>
 
-<!-- Footer -->
+<!-- Upgraded Footer (Step 16) -->
 <footer>
-    <h3>© 2026 Pasiya Max Media</h3>
 
-    <p>
-        Powered by AI • GitHub • Vercel • Botpress
-    </p>
+<h2>🚀 Pasiya Max Media</h2>
 
-    <div class="footer-links">
+<p>
+Your Personal AI & Digital Control Center
+</p>
 
-        <a href="https://pasiyamax.vercel.app" target="_blank" rel="noopener noreferrer">
-            🌐 Website
-        </a>
+<div class="footer-links">
 
-        <a href="https://pasindudananjaya.substack.com" target="_blank" rel="noopener noreferrer">
-            📰 Substack
-        </a>
+<a href="https://mamageblog.blogspot.com" target="_blank" rel="noopener noreferrer">🌍 Blogger</a>
 
-        <a href="https://mamageblog.blogspot.com" target="_blank" rel="noopener noreferrer">
-            📝 Blogger
-        </a>
+<a href="https://pasindudananjaya.substack.com" target="_blank" rel="noopener noreferrer">📝 Substack</a>
 
-        <a href="https://github.com/pasindudananjaya92-bot/pasiya-max-ai" target="_blank" rel="noopener noreferrer">
-            💻 GitHub
-        </a>
+<a href="https://github.com/pasindudananjaya92-bot/pasiya-max-ai" target="_blank" rel="noopener noreferrer">💻 GitHub</a>
 
-    </div>
+<a href="https://pasiyamax.vercel.app" target="_blank" rel="noopener noreferrer">🚀 Vercel</a>
 
-    <p style="margin-top:20px;font-size:14px;color:#9ca3af;">
-        Designed & Developed by Pasindu Dananjaya
-    </p>
+<a href="https://www.facebook.com/share/18xRGhYVUo/" target="_blank" rel="noopener noreferrer">📘 Facebook</a>
+
+<a href="https://www.instagram.com/pasindu5598" target="_blank" rel="noopener noreferrer">📸 Instagram</a>
+
+<a href="https://youtube.com/@pasya" target="_blank" rel="noopener noreferrer">▶️ YouTube</a>
+
+</div>
+
+<p class="footer-copy">
+© 2026 Pasiya Max Media • All Rights Reserved
+</p>
+
+<p class="footer-version">
+Version 1.0.0 • Last Updated: August 2026
+</p>
 
 </footer>
 
-<!-- Back To Top Button (Step 25) -->
+<!-- Back To Top Button -->
 <button onclick="topFunction()" id="topBtn" title="Go to top">
 ⬆
 </button>
@@ -1565,7 +1837,6 @@ if (navigator.geolocation) {
     const lon = position.coords.longitude;
     document.getElementById("location").textContent = lat.toFixed(4) + ", " + lon.toFixed(4);
     
-    // Fetch live weather from open-meteo
     fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true`)
       .then(response => response.json())
       .then(data => {
@@ -1590,43 +1861,74 @@ if (navigator.geolocation) {
 }
 </script>
 
+<!-- JavaScript for Weather Connection Status -->
+<script>
+if(navigator.onLine){
+  document.getElementById("weather").innerHTML = "🌐 Internet Connected";
+  document.getElementById("temperature").innerHTML = "Ready for Live Weather";
+}else{
+  document.getElementById("weather").innerHTML = "🔴 Offline";
+  document.getElementById("temperature").innerHTML = "No Internet Connection";
+}
+</script>
+
 <!-- JavaScript for Quick Search -->
 <script>
 function searchSection(){
 const value = document.getElementById("searchInput").value.toLowerCase().trim();
 
-const sections = {
-  home: "#home",
-  ai: "#ai",
-  about: "#about",
-  contact: "#contact",
-  social: "#social",
-  dashboard: "#ai",
-  language: ".language",
-  weather: ".weather-panel",
-  downloads: ".download-center",
-  download: ".download-center",
-  notification: ".notification-center",
-  notifications: ".notification-center",
-  device: ".device-panel",
-  search: ".search-section",
-  status: ".status",
-  visitor: ".visitor-counter",
-  welcome: ".welcome-panel",
-  tools: "#tools",
-  control: "#control",
-  admin: ".admin-login"
-};
+switch(value){
+case "home":
+location.href = "#home";
+break;
 
-if(sections[value]){
-  const element = document.querySelector(sections[value]);
-  if(element){
-    element.scrollIntoView({
-      behavior: "smooth"
-    });
-  }
-}else{
-  alert("No matching section found.");
+case "ai":
+location.href = "#ai";
+break;
+
+case "about":
+location.href = "#about";
+break;
+
+case "contact":
+location.href = "#contact";
+break;
+
+case "social":
+location.href = "#social";
+break;
+
+case "tools":
+location.href = "#tools";
+break;
+
+case "blog":
+window.open("https://mamageblog.blogspot.com","_blank");
+break;
+
+case "substack":
+window.open("https://pasindudananjaya.substack.com","_blank");
+break;
+
+case "github":
+window.open("https://github.com/pasindudananjaya92-bot/pasiya-max-ai","_blank");
+break;
+
+case "youtube":
+window.open("https://youtube.com/@pasya","_blank");
+break;
+
+case "facebook":
+window.open("https://www.facebook.com/share/18xRGhYVUo/","_blank");
+break;
+
+case "bot":
+case "botpress":
+window.open("https://cdn.botpress.cloud/webchat/v3.7/shareable.html?configUrl=https://files.bpcontent.cloud/2026/06/01/11/20260601113625-WPR56EUS.json","_blank");
+break;
+
+default:
+alert("No matching result found.");
 }
 }
 
@@ -1734,6 +2036,121 @@ themeBtn.addEventListener("click", () => {
 });
 </script>
 
+<!-- Custom Cursor Glow Script (Step 23 - JS) -->
+<script>
+const cursor = document.getElementById("cursorGlow");
+
+document.addEventListener("mousemove", function(e){
+cursor.style.left = e.clientX + "px";
+cursor.style.top = e.clientY + "px";
+});
+
+document.querySelectorAll("a, button").forEach(item=>{
+
+item.addEventListener("mouseenter", function(){
+cursor.style.width = "35px";
+cursor.style.height = "35px";
+});
+
+item.addEventListener("mouseleave", function(){
+cursor.style.width = "20px";
+cursor.style.height = "20px";
+});
+
+});
+</script>
+
+<!-- Scroll Progress Bar Script (Step 24 - JS) -->
+<script>
+window.addEventListener("scroll", function(){
+const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+const progress = (winScroll / height) * 100;
+document.getElementById("scrollProgress").style.width = progress + "%";
+});
+</script>
+
+<!-- ===== Basic Website Protection ===== -->
+<script>
+// Disable Right Click
+document.addEventListener("contextmenu", function(e){
+    e.preventDefault();
+});
+
+// Disable Some Keyboard Shortcuts
+document.addEventListener("keydown", function(e){
+
+    // F12
+    if(e.key === "F12"){
+        e.preventDefault();
+    }
+
+    // Ctrl + Shift + I
+    if(e.ctrlKey && e.shiftKey && e.key.toLowerCase() === "i"){
+        e.preventDefault();
+    }
+
+    // Ctrl + Shift + J
+    if(e.ctrlKey && e.shiftKey && e.key.toLowerCase() === "j"){
+        e.preventDefault();
+    }
+
+    // Ctrl + U
+    if(e.ctrlKey && e.key.toLowerCase() === "u"){
+        e.preventDefault();
+    }
+
+    // Ctrl + S
+    if(e.ctrlKey && e.key.toLowerCase() === "s"){
+        e.preventDefault();
+    }
+
+});
+</script>
+
+<!-- ===== Offline / Online Status Banner (Step 21) ===== -->
+<script>
+const networkBanner = document.getElementById("networkBanner");
+
+function updateNetworkBanner(){
+
+if(navigator.onLine){
+
+networkBanner.className = "online";
+networkBanner.innerHTML = "🟢 Internet Connected";
+networkBanner.style.display = "block";
+
+setTimeout(()=>{
+networkBanner.style.display = "none";
+},3000);
+
+}else{
+
+networkBanner.className = "offline";
+networkBanner.innerHTML = "🔴 No Internet Connection";
+networkBanner.style.display = "block";
+
+}
+
+}
+
+window.addEventListener("online", updateNetworkBanner);
+window.addEventListener("offline", updateNetworkBanner);
+
+updateNetworkBanner();
+</script>
+
+<!-- ===== Professional Preloader Script (Step 22) ===== -->
+<script>
+window.addEventListener("load", function(){
+const preloader = document.getElementById("preloader");
+
+setTimeout(function(){
+preloader.classList.add("hide");
+}, 1000);
+
+});
+</script>
+
 </body>
 </html>
- 
